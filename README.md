@@ -4,15 +4,14 @@ A project for CSC-207.
 
 Authors:
 
-* Your Name Here
+* Maral Bat-Erdene
 * Samuel A. Rebelsky (starter code)
 
 ---
 
 Overview:
 
-PLEASE PROVIDE AN OVERVIEW OF THE PROJECT FOR THOSE WHO MIGHT NOT
-OTHERWISE UNDERSTAND IT.
+This project is implementing two-dimensional array using my previous project on Associative Array.
 
 ---
 
@@ -20,6 +19,6 @@ Citations:
 
 ---
 
-This code may be found at <https://github.com/USERID/mp-matrices-maven>. 
+This code may be found at <https://github.com/1maral/mini-project-6>. 
 
 The original code may be found at <https://github.com/Grinnell-CSC207/mp-matrices-maven>.
