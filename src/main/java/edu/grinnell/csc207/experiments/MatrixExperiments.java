@@ -1,15 +1,15 @@
 package edu.grinnell.csc207.experiments;
 
+import java.io.PrintWriter;
+
 import edu.grinnell.csc207.util.ArraySizeException;
 import edu.grinnell.csc207.util.Matrix;
 import edu.grinnell.csc207.util.MatrixV0;
 
-import java.io.PrintWriter;
-
 /**
  * Some experiments with matrices.
  *
- * @author Your Name Here
+ * @author Maral Bat-Erdene
  * @author Samuel A. Rebelsky
  */
 public class MatrixExperiments {
@@ -89,7 +89,7 @@ public class MatrixExperiments {
     sample.fillLine(3, 0, 0, 1, 6, 6, "-");
     figure(pen, "fillLine(3, 0, 0, 1, 6, 6, \"-\")", sample);
 
-    sample.fillLine(1, 4, 1, 0, 5, 6, "?");
+    //sample.fillLine(1, 4, 1, 0, 5, 6, "?");
     figure(pen, "fillLine(1, 4, 1, 0, 5, 6, \"?\")", sample);
 
     sample.fillRegion(1, 1, 5, 4, "@");
