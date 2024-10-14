@@ -89,7 +89,7 @@ public class MatrixExperiments {
     sample.fillLine(3, 0, 0, 1, 6, 6, "-");
     figure(pen, "fillLine(3, 0, 0, 1, 6, 6, \"-\")", sample);
 
-    //sample.fillLine(1, 4, 1, 0, 5, 6, "?");
+    sample.fillLine(1, 4, 1, 0, 5, 6, "?");
     figure(pen, "fillLine(1, 4, 1, 0, 5, 6, \"?\")", sample);
 
     sample.fillRegion(1, 1, 5, 4, "@");

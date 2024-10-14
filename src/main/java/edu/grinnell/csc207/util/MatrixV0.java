@@ -408,7 +408,13 @@ public class MatrixV0<T> implements Matrix<T> {
         for (int y = startRow; y < endRow; y = y + deltaRow) {
           for (int x = startCol; x < endCol; x = x + deltaCol) {
             this.contents[y][x] = val;
+            if (deltaCol == 0) {
+              break;
+            }
           } // for(width)
+          if (deltaRow == 0) {
+            break;
+          }
         } // for(height)
   } // fillLine(int, int, int, int, int, int, T)
 
