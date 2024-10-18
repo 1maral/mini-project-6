@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
-/**e
+/**
  * A variety of tests for the Matrix class.
  *
  * @author Samuel A. Rebelsky
@@ -413,6 +413,7 @@ class TestMatrix {
         strings,
         "M: After inserting the last column");
 
+    System.out.println(strings);
     strings.fillLine(0, 0, 1, 1, 4, 4, "c");
     assertMatrixEquals(
         new String[][]

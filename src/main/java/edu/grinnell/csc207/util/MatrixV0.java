@@ -404,18 +404,22 @@ public class MatrixV0<T> implements Matrix<T> {
         if (endRow < 0 || endRow > this.height || endCol < 0 || endCol > this.width) {
           throw new IndexOutOfBoundsException();
         } // if
-
-        for (int y = startRow; y < endRow; y = y + deltaRow) {
-          for (int x = startCol; x < endCol; x = x + deltaCol) {
-            this.contents[y][x] = val;
-            if (deltaCol == 0) {
-              break;
-            }
-          } // for(width)
-          if (deltaRow == 0) {
+        // While within bounds of the matrix.
+        
+        while ((startRow < endRow) && (startCol < endCol)) {
+          // Set the value at the current row and column.
+          this.contents[startRow][startCol] = val;
+          // Move to the next row and column based on deltaRow and deltaCol.
+          startRow += deltaRow;
+          startCol += deltaCol;
+          // If we've reached the boundaries, break.
+          if ((deltaRow > 0 && startRow >= endRow) || (deltaRow < 0 && startRow < endRow)) {
             break;
-          }
-        } // for(height)
+          } // if
+          if ((deltaCol > 0 && startCol >= endCol) || (deltaCol < 0 && startCol < endCol)) {
+              break;
+          } // if
+        } // while
   } // fillLine(int, int, int, int, int, int, T)
 
   /**
@@ -451,11 +455,11 @@ public class MatrixV0<T> implements Matrix<T> {
       return false;
     } // if
 
-    // Cast the other object to MatrixV0
-    MatrixV0<T> otherMatrix = (MatrixV0<T>) other;
+    // Cast the other object to Matrix
+    Matrix otherMatrix = (Matrix) other;
 
     // Check dimensions
-    if (this.height != otherMatrix.height || this.width != otherMatrix.width) {
+    if (this.height != otherMatrix.height() || this.width != otherMatrix.width()) {
         return false;
     } // if
 
